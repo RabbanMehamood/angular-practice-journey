@@ -1,0 +1,25 @@
+p {
+  display: inline-block;
+  position: relative;
+  bottom: 15px;
+  background-color: beige;
+  border-color: black;
+  border-style: ridge;
+  border-radius: 6px;
+  margin: 0px 9px;
+  height: 40px;
+  padding: 5px;
+  text-align: center;
+}
+span {
+  font-size: 40px;
+  display: inline-block;
+  width: 38px;
+  background-color: bisque;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 6px;
+}
+div {
+  margin: 5px 10px;
+}

@@ -1,0 +1,27 @@
+div {
+  display: flex;
+  align-items: center;
+}
+p {
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+}
+input {
+  width: 200px;
+  height: 30px;
+}
+.searchedStyle {
+  background-color: rgba(6, 69, 28, 0.981);
+  border: 2px solid rgb(19, 58, 64);
+  border-radius: 6px;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  text-align: center;
+}
+.svgstyle {
+  position: relative;
+  top: -2px;
+  left: -6px;
+}

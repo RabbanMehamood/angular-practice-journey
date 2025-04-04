@@ -1,0 +1,16 @@
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+ul > li {
+  color: rgb(8, 68, 233);
+  cursor: pointer;
+  text-decoration: underline;
+}
+ul > li:hover {
+  color: white;
+  transform: scale(1.2);
+}
+

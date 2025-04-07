@@ -1,0 +1,7 @@
+.coursesDiv {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 5px;
+  background-color: dodgerblue;
+  padding: 10px;
+}

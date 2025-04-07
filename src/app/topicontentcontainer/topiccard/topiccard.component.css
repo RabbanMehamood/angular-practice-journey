@@ -1,0 +1,17 @@
+.courseCard {
+  background-color: darkgray;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+h3 {
+  color: rgb(57, 43, 21);
+}
+#iid {
+  position: absolute;
+  left: 5px;
+  top: 2px;
+}

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-nav-links',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, CommonModule],
   templateUrl: './nav-links.component.html',
   styleUrl: './nav-links.component.css',
 })

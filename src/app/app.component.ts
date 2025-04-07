@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-
 import { HeaderComponent } from './header/header.component';
-import { TopicontentComponent } from './topicontent/topicontent.component';
+import { TopicontentComponent } from './topicontentcontainer/topicontent.component';
 
 @Component({
   selector: 'app-root',

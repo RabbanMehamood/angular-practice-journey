@@ -3,13 +3,20 @@ div {
   align-items: center;
 }
 p {
-  color: white;
+  color: black;
   font-size: 14px;
   padding: 10px;
 }
 input {
   width: 200px;
   height: 30px;
+}
+button {
+  background-color: white;
+  margin-right: 30px;
+  color: black;
+
+  margin-left: 10px;
 }
 .searchedStyle {
   background-color: rgba(6, 69, 28, 0.981);
@@ -20,8 +27,9 @@ input {
   margin: 0 10px;
   text-align: center;
 }
-.svgstyle {
-  position: relative;
-  top: -2px;
-  left: -6px;
+
+div {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
 }

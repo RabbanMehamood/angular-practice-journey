@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
 import { TopiccardComponent } from './topiccard/topiccard.component';
+import { SearchComponent } from './search/search.component';
 import { FilterComponent } from './filter/filter.component';
 const topicsObject = [
   // HTML Topics
@@ -456,7 +457,7 @@ const topicsObject = [
 @Component({
   selector: 'app-topicontent',
   standalone: true,
-  imports: [NgFor, NgIf, TopiccardComponent, FilterComponent],
+  imports: [NgFor, NgIf, TopiccardComponent, FilterComponent, SearchComponent],
   templateUrl: './topicontent.component.html',
   styleUrl: './topicontent.component.css',
 })

@@ -1,0 +1,10 @@
+<div>
+  <input
+    type="search"
+    [(ngModel)]="searchInputString"
+    (input)="onSearchTextChanged()"
+    #searchInput
+  />
+  <button (click)="getInputValue()">Search</button>
+  <p *ngIf="searchInputString != ''">Searched Topic: {{ searchInputString }}</p>
+</div>

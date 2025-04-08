@@ -5,3 +5,9 @@
   background-color: dodgerblue;
   padding: 10px;
 }
+.filter--search--style {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+}

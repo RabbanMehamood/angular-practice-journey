@@ -1,5 +1,9 @@
 <div>
-  <input type="search" [(ngModel)]="searchInputString" />
+  <input
+    type="search"
+    [(ngModel)]="searchInputString"
+    (input)="onSearchTextChanged()"
+  />
   <button
     [ngClass]="{
       searchDisablestyle: !searchInputString,

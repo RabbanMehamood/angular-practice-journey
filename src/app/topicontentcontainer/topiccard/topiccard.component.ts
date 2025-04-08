@@ -1,7 +1,5 @@
 import { Component, Input } from '@angular/core';
 
-type NewType = boolean;
-
 @Component({
   selector: 'app-topiccard',
   imports: [],
@@ -17,7 +15,7 @@ export class TopiccardComponent {
     timeToLearn: string;
     price: number;
     complexity: string;
-    completed: NewType;
+    completed: boolean;
     language: string;
   };
 }

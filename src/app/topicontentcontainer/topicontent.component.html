@@ -8,7 +8,10 @@
   <div *ngFor="let topic of topics">
     <app-topiccard
       [item]="topic"
-      *ngIf="selectedFilterRadioButton === 'allConcepts' || topic.completed"
+      *ngIf="
+        selectedFilterRadioButton === 'allConcepts' ||
+        topic.completed.toString() === selectedFilterRadioButton
+      "
     ></app-topiccard>
   </div>
 </div>

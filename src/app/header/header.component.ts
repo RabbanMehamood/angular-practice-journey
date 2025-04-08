@@ -4,9 +4,9 @@ import { SearchComponent } from './search/search.component';
 
 @Component({
   selector: 'app-header',
+  standalone: true,
   templateUrl: './header.component.html',
   imports: [NavLinksComponent, SearchComponent],
-  standalone: true,
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {

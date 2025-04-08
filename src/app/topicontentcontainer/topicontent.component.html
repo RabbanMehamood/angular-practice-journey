@@ -1,4 +1,14 @@
-<app-filter [allConcepts]="all"></app-filter>
+<app-filter
+  [allConcepts]="all"
+  [completedConcepts]="completed"
+  [incompleteConcepts]="incomplete"
+  (selectedFilterRadioButtonChanged)="onFilterChanged($event)"
+></app-filter>
 <div class="coursesDiv">
-  <app-topiccard *ngFor="let topic of topics" [item]="topic"></app-topiccard>
+  <div *ngFor="let topic of topics">
+    <app-topiccard
+      [item]="topic"
+      *ngIf="selectedFilterRadioButton === 'allConcepts' || topic.completed"
+    ></app-topiccard>
+  </div>
 </div>

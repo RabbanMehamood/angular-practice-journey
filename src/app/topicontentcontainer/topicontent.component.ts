@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { TopiccardComponent } from './topiccard/topiccard.component';
 import { FilterComponent } from './filter/filter.component';
 const topicsObject = [
@@ -11,7 +11,7 @@ const topicsObject = [
     timeToLearn: '1 hour',
     price: 0,
     complexity: 'Beginner',
-    completed: false,
+    completed: true,
     language: 'HTML',
   },
   {
@@ -41,7 +41,7 @@ const topicsObject = [
     timeToLearn: '2 hours',
     price: 0,
     complexity: 'Intermediate',
-    completed: false,
+    completed: true,
     language: 'HTML',
   },
   {
@@ -81,7 +81,7 @@ const topicsObject = [
     timeToLearn: '1.5 hours',
     price: 0,
     complexity: 'Intermediate',
-    completed: false,
+    completed: true,
     language: 'HTML',
   },
   {
@@ -101,7 +101,7 @@ const topicsObject = [
     timeToLearn: '1 hour',
     price: 0,
     complexity: 'Beginner',
-    completed: false,
+    completed: true,
     language: 'HTML',
   },
   {
@@ -173,7 +173,7 @@ const topicsObject = [
     timeToLearn: '2 hours',
     price: 0,
     complexity: 'Intermediate',
-    completed: false,
+    completed: true,
     language: 'CSS',
   },
   {
@@ -204,7 +204,7 @@ const topicsObject = [
     timeToLearn: '1 hour',
     price: 0,
     complexity: 'Beginner',
-    completed: false,
+    completed: true,
     language: 'JavaScript',
   },
   {
@@ -214,7 +214,7 @@ const topicsObject = [
     timeToLearn: '1.5 hours',
     price: 0,
     complexity: 'Beginner',
-    completed: false,
+    completed: true,
     language: 'JavaScript',
   },
   {
@@ -254,7 +254,7 @@ const topicsObject = [
     timeToLearn: '1.5 hours',
     price: 0,
     complexity: 'Intermediate',
-    completed: false,
+    completed: true,
     language: 'JavaScript',
   },
   {
@@ -276,7 +276,7 @@ const topicsObject = [
     timeToLearn: '1 hour',
     price: 0,
     complexity: 'Beginner',
-    completed: false,
+    completed: true,
     language: 'TypeScript',
   },
   {
@@ -326,7 +326,7 @@ const topicsObject = [
     timeToLearn: '1.5 hours',
     price: 0,
     complexity: 'Intermediate',
-    completed: false,
+    completed: true,
     language: 'TypeScript',
   },
 
@@ -368,7 +368,7 @@ const topicsObject = [
     timeToLearn: '2 hours',
     price: 0,
     complexity: 'Intermediate',
-    completed: false,
+    completed: true,
     language: 'Angular',
   },
   {
@@ -398,7 +398,7 @@ const topicsObject = [
     timeToLearn: '1.5 hours',
     price: 0,
     complexity: 'Intermediate',
-    completed: false,
+    completed: true,
     language: 'Angular',
   },
   {
@@ -438,7 +438,7 @@ const topicsObject = [
     timeToLearn: '2.5 hours',
     price: 0,
     complexity: 'Intermediate',
-    completed: false,
+    completed: true,
     language: 'Angular',
   },
   {
@@ -448,7 +448,7 @@ const topicsObject = [
     timeToLearn: '1.5 hours',
     price: 0,
     complexity: 'Intermediate',
-    completed: false,
+    completed: true,
     language: 'Angular',
   },
 ];
@@ -456,11 +456,25 @@ const topicsObject = [
 @Component({
   selector: 'app-topicontent',
   standalone: true,
-  imports: [NgFor, TopiccardComponent, FilterComponent],
+  imports: [NgFor, NgIf, TopiccardComponent, FilterComponent],
   templateUrl: './topicontent.component.html',
   styleUrl: './topicontent.component.css',
 })
 export class TopicontentComponent {
   topics = topicsObject;
   all = topicsObject.length.toString();
+
+  completed = topicsObject
+    .filter((item) => item.completed === true)
+    .length.toString();
+
+  incomplete = topicsObject
+    .filter((item) => item.completed === false)
+    .length.toString();
+
+  selectedFilterRadioButton: string = 'allConcepts';
+  onFilterChanged(value: string) {
+    console.log(value);
+    this.selectedFilterRadioButton = value;
+  }
 }
